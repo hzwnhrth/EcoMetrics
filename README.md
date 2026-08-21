@@ -1,16 +1,66 @@
-# React + Vite
+# 🌿 GreenReceipt
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![GreenReceipt Hero Image](https://via.placeholder.com/1200x400/0f172a/10b981?text=GreenReceipt+-+Make+Sustainability+Actionable)
 
-Currently, two official plugins are available:
+**DevLeague 2026 Hackathon Submission**
+* **Target Lab:** Lab 3 (Operational Sustainability & ESG)
+* **Bonus Track:** Solana Web3 Track
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎯 The Problem
+Business owners are required to track and reduce their carbon footprint, but the data is trapped in messy paper utility bills and logistics invoices. Tracking ESG goals is currently a slow, manual, and unmeasurable process for most SMEs in Southeast Asia.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💡 The Solution
+**GreenReceipt** makes sustainability measurable and instantly actionable. It is an AI-powered dashboard that extracts usage data from uploaded bills, calculates the exact carbon footprint, and offers a one-click offset via the Solana blockchain.
 
-## Expanding the Oxlint configuration
+### 🚀 How it Works (The User Journey)
+1. **Upload:** A business owner drops a PDF electricity or logistics bill into the dashboard.
+2. **AI Extraction:** Our Vision AI instantly reads the text (e.g., "500 kWh used") and automatically calculates the exact carbon footprint in tons of CO2.
+3. **The Solana Offset:** The user clicks "Offset on Solana" to trigger a frictionless micro-transaction to a verified tree-planting charity, offsetting their footprint instantly.
+4. **ESG Reporting:** The user can instantly export their dashboard into a professional ESG compliance PDF.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## 🛠️ Built With
+
+*   **Frontend:** React, Next.js (Vite)
+*   **Styling:** Tailwind CSS, Framer Motion (Glassmorphism & Micro-animations)
+*   **AI Engine:** Google Gemini Vision API
+*   **Blockchain Integration:** Solana Web3 (Wallet Adapter)
+*   **Data Export:** html2pdf.js
+
+---
+
+## 💻 Getting Started (Local Setup)
+
+Want to run GreenReceipt locally? Follow these steps:
+
+### Prerequisites
+*   Node.js (v18+)
+*   npm or yarn
+
+### Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hzwnhrth/GreenReceipt.git
+   cd GreenReceipt
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **View the app**
+   Open your browser and navigate to `http://localhost:5173`
+
+---
+
+## 👨‍💻 Team
+Built with ❤️ for DevLeague 2026.
