@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getStore } from "@/lib/store";
 import { LoginForm } from "@/components/login-form";
 
@@ -15,6 +16,13 @@ export default async function LoginPage({
   return (
     <div className="mx-auto flex max-w-md flex-col justify-center py-10">
       <div className="mb-6 text-center">
+        <Image
+          src="/logo.jpg"
+          alt="EcoMetrics logo"
+          width={64}
+          height={64}
+          className="mx-auto mb-3 rounded-full"
+        />
         <h1 className="text-2xl font-semibold tracking-tight">EcoMetrics</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           ESG Evidence &amp; Action — sign in to see the dashboard, priorities, actions and report.

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -32,10 +33,13 @@ export function TopNav({ tally, user }: { tally?: string; user: NavUser | null }
   return (
     <header className="border-b print:hidden">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-1 gap-y-2 px-4 py-3">
-        <span className="mr-4 flex flex-col leading-tight">
-          <span className="text-sm font-semibold tracking-tight">EcoMetrics</span>
-          <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-            ESG Evidence &amp; Action
+        <span className="mr-4 flex items-center gap-2">
+          <Image src="/logo.jpg" alt="EcoMetrics logo" width={28} height={28} className="rounded-full" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-sm font-semibold tracking-tight">EcoMetrics</span>
+            <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+              ESG Evidence &amp; Action
+            </span>
           </span>
         </span>
         {user && (
