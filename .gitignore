@@ -11,6 +11,22 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# env
+.env*
+!.env.example
+
+# local dev persistence (lib/store.ts file backend)
+data/store.json
 
 # runtime persistence (bind-mounted into the prod container)
 data/
@@ -28,3 +44,4 @@ esg-hackathon-repo-pack/
 *.njsproj
 *.sln
 *.sw?
+*:Zone.Identifier
