@@ -128,3 +128,42 @@
     @apply font-sans;
   }
 }
+
+/* Print: /report exports as a clean black-on-white A4 page.
+   Nav and buttons carry Tailwind's print:hidden; this handles the rest. */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  :root {
+    --background: #fff;
+    --foreground: #000;
+    --card: #fff;
+    --card-foreground: #000;
+    --popover: #fff;
+    --popover-foreground: #000;
+    --muted: #f3f3f3;
+    --muted-foreground: #444;
+    --border: #ccc;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  button,
+  [role="button"] {
+    display: none !important;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: none;
+  }
+  .report-print section {
+    break-inside: avoid;
+  }
+}

@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/table";
 import { StatusBadge } from "@/components/status";
 import { ActionStatusSelect } from "@/components/action-status-select";
+import { DigestDialog } from "@/components/digest-dialog";
+import { buildDigest } from "@/lib/suggest";
 import type { Action } from "@/lib/types";
 
 function dueState(a: Action, today: Date): { label: string; status: "green" | "amber" | "red" } | null {
@@ -30,12 +32,15 @@ export default async function ActionsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Actions</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {actions.length} action{actions.length === 1 ? "" : "s"} — auto-resolved when a re-scanned
-          file makes the finding disappear.
-        </p>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Actions</h1>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {actions.length} action{actions.length === 1 ? "" : "s"} — auto-resolved when a re-scanned
+            file makes the finding disappear.
+          </p>
+        </div>
+        <DigestDialog groups={buildDigest(actions, today)} />
       </div>
 
       {actions.length === 0 ? (
