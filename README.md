@@ -1,6 +1,6 @@
-# 🌿 GreenReceipt
+# 🌿 EcoMetrics
 
-![GreenReceipt Hero Image](https://via.placeholder.com/1200x400/0f172a/10b981?text=GreenReceipt+-+Make+Sustainability+Actionable)
+![EcoMetrics Hero Image](https://via.placeholder.com/1200x400/0f172a/10b981?text=EcoMetrics+-+Make+Sustainability+Actionable)
 
 **DevLeague 2026 Hackathon Submission**
 * **Target Lab:** Lab 3 (Operational Sustainability & ESG)
@@ -12,7 +12,7 @@
 Business owners are required to track and reduce their carbon footprint, but the data is trapped in messy paper utility bills and logistics invoices. Tracking ESG goals is currently a slow, manual, and unmeasurable process for most SMEs in Southeast Asia.
 
 ## 💡 The Solution
-**GreenReceipt** makes sustainability measurable and instantly actionable. It is an AI-powered dashboard that extracts usage data from uploaded bills, calculates the exact carbon footprint, and offers a one-click offset via the Solana blockchain.
+**EcoMetrics** makes sustainability measurable and instantly actionable. It is an AI-powered dashboard that extracts usage data from uploaded bills, calculates the exact carbon footprint, and offers a one-click offset via the Solana blockchain.
 
 ### 🚀 How it Works (The User Journey)
 1. **Upload:** A business owner drops a PDF electricity or logistics bill into the dashboard.
@@ -34,7 +34,7 @@ Business owners are required to track and reduce their carbon footprint, but the
 
 ## 💻 Getting Started (Local Setup)
 
-Want to run GreenReceipt locally? Follow these steps:
+Want to run EcoMetrics locally? Follow these steps:
 
 ### Prerequisites
 *   Node.js (v18+)
@@ -43,8 +43,8 @@ Want to run GreenReceipt locally? Follow these steps:
 ### Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/hzwnhrth/GreenReceipt.git
-   cd GreenReceipt
+   git clone https://github.com/hzwnhrth/EcoMetrics.git
+   cd EcoMetrics
    ```
 
 2. **Install dependencies**
