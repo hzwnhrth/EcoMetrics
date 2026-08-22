@@ -1,0 +1,33 @@
+[
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 1",
+    "pillar": "E",
+    "field": "electricity_kwh",
+    "value": "1240",
+    "unit": "kWh",
+    "period": "2025-01",
+    "confidence": "verified",
+    "note": "hand-written Phase 1 placeholder; Phase 2 extract-seed.mjs overwrites this file"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F6",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "1500",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_approved_by",
+    "value": "",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  }
+]
