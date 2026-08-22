@@ -1,6 +1,8 @@
 # 🌿 EcoMetrics
 
-![EcoMetrics Hero Image](https://via.placeholder.com/1200x400/0f172a/10b981?text=EcoMetrics+-+Make+Sustainability+Actionable)
+<div align="center">
+  <img src="public/logo.jpg" alt="EcoMetrics Logo" width="200" style="border-radius: 50%;" />
+</div>
 
 **DevLeague 2026 Hackathon Submission**
 * **Target Lab:** Lab 3 (Operational Sustainability & ESG)
