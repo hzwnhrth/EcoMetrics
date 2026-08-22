@@ -3,16 +3,1246 @@
     "source_file": "E_electricity_bills_2025.pdf",
     "source_ref": "page 1",
     "pillar": "E",
-    "field": "electricity_kwh",
-    "value": "1240",
-    "unit": "kWh",
     "period": "2025-01",
-    "confidence": "verified",
-    "note": "hand-written Phase 1 placeholder; Phase 2 extract-seed.mjs overwrites this file"
+    "field": "electricity_kwh",
+    "value": "19240",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 1",
+    "pillar": "E",
+    "period": "2025-01",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 1",
+    "pillar": "E",
+    "period": "2025-01",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 1",
+    "pillar": "E",
+    "period": "2025-01",
+    "field": "bill_total_rm",
+    "value": "12416.36",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 2",
+    "pillar": "E",
+    "period": "2025-02",
+    "field": "electricity_kwh",
+    "value": "17880",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 2",
+    "pillar": "E",
+    "period": "2025-02",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 2",
+    "pillar": "E",
+    "period": "2025-02",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 2",
+    "pillar": "E",
+    "period": "2025-02",
+    "field": "bill_total_rm",
+    "value": "11580.45",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 3",
+    "pillar": "E",
+    "period": "2025-05",
+    "field": "electricity_kwh",
+    "value": "21150",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 3",
+    "pillar": "E",
+    "period": "2025-05",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 3",
+    "pillar": "E",
+    "period": "2025-05",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 3",
+    "pillar": "E",
+    "period": "2025-05",
+    "field": "bill_total_rm",
+    "value": "13529.25",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 4",
+    "pillar": "E",
+    "period": "2025-06",
+    "field": "electricity_kwh",
+    "value": "20470",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 4",
+    "pillar": "E",
+    "period": "2025-06",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 4",
+    "pillar": "E",
+    "period": "2025-06",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 4",
+    "pillar": "E",
+    "period": "2025-06",
+    "field": "bill_total_rm",
+    "value": "13102.99",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 5",
+    "pillar": "E",
+    "period": "2025-07",
+    "field": "electricity_kwh",
+    "value": "22310",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 5",
+    "pillar": "E",
+    "period": "2025-07",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 5",
+    "pillar": "E",
+    "period": "2025-07",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 5",
+    "pillar": "E",
+    "period": "2025-07",
+    "field": "bill_total_rm",
+    "value": "14230.02",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 6",
+    "pillar": "E",
+    "period": "2025-08",
+    "field": "electricity_kwh",
+    "value": "31900",
+    "unit": "kWh",
+    "confidence": "estimated",
+    "note": "reading type ANGGARAN"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 6",
+    "pillar": "E",
+    "period": "2025-08",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 6",
+    "pillar": "E",
+    "period": "2025-08",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 6",
+    "pillar": "E",
+    "period": "2025-08",
+    "field": "bill_total_rm",
+    "value": "16264.83",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 7",
+    "pillar": "E",
+    "period": "2025-10",
+    "field": "electricity_kwh",
+    "value": "20880",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 7",
+    "pillar": "E",
+    "period": "2025-10",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 7",
+    "pillar": "E",
+    "period": "2025-10",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 7",
+    "pillar": "E",
+    "period": "2025-10",
+    "field": "bill_total_rm",
+    "value": "13348.47",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 8",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "electricity_kwh",
+    "value": "23540",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 8",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 8",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 8",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "bill_total_rm",
+    "value": "14949.86",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 9",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "electricity_kwh",
+    "value": "4120",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 9",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "account_number",
+    "value": "220198334521",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 9",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "site_address",
+    "value": "NO. 8, JALAN BATU UNJUR 7 BANDAR BUKIT TINGGI, 41200 KLANG SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 9",
+    "pillar": "E",
+    "period": "2025-11",
+    "field": "bill_total_rm",
+    "value": "2734.68",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 10",
+    "pillar": "E",
+    "period": "2025-12",
+    "field": "electricity_kwh",
+    "value": "18960",
+    "unit": "kWh",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 10",
+    "pillar": "E",
+    "period": "2025-12",
+    "field": "account_number",
+    "value": "220145678903",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 10",
+    "pillar": "E",
+    "period": "2025-12",
+    "field": "site_address",
+    "value": "NO. 12, JALAN UTARID U5/17 SEKSYEN U5, 40150 SHAH ALAM SELANGOR DARUL EHSAN",
+    "unit": "text",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "E_electricity_bills_2025.pdf",
+    "source_ref": "page 10",
+    "pillar": "E",
+    "period": "2025-12",
+    "field": "bill_total_rm",
+    "value": "12210.56",
+    "unit": "RM",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A6",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0001",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C6",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D6",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E6",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
   },
   {
     "source_file": "S_payroll_headcount_2025.xlsx",
     "source_ref": "Payroll Dec 2025!F6",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G6",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "14/03/2016",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I6",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3200",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M6",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "12",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N6",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A7",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0002",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C7",
+    "pillar": "S",
+    "field": "department",
+    "value": "Admin",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D7",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E7",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F7",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G7",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "01/06/2017",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I7",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3800",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M7",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N7",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A8",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0003",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C8",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D8",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E8",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F8",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G8",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "19/01/2015",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I8",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3450",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N8",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A9",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0004",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C9",
+    "pillar": "S",
+    "field": "department",
+    "value": "QA",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D9",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E9",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F9",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G9",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "02/09/2019",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I9",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3100",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M9",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "16",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N9",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A10",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0005",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C10",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D10",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E10",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F10",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G10",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "07/04/2014",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I10",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "4100",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M10",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "6",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N10",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A11",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0006",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C11",
+    "pillar": "S",
+    "field": "department",
+    "value": "PRODUCTION",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D11",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E11",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F11",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G11",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "12/11/2018",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I11",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2950",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N11",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A12",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0007",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C12",
+    "pillar": "S",
+    "field": "department",
+    "value": "HR",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D12",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E12",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F12",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G12",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "17/02/2020",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I12",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "4200",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M12",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "24",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N12",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A13",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0008",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C13",
+    "pillar": "S",
+    "field": "department",
+    "value": "Finance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D13",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E13",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F13",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G13",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "06/05/2019",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I13",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "4500",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M13",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "20",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N13",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A14",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0009",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C14",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D14",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E14",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Bangladeshi",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F14",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Contract",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G14",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "15/08/2022",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I14",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "1620",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N14",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A15",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0010",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C15",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D15",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E15",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Bangladeshi",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F15",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Contract",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G15",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "15/08/2022",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I15",
     "pillar": "S",
     "field": "basic_salary",
     "value": "1500",
@@ -21,11 +1251,3032 @@
     "confidence": "verified"
   },
   {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N15",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "No",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A16",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0011",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C16",
+    "pillar": "S",
+    "field": "department",
+    "value": "Admin",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D16",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E16",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F16",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G16",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "11/01/2021",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I16",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3300",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M16",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "10",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N16",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A17",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0012",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C17",
+    "pillar": "S",
+    "field": "department",
+    "value": "Maintenance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D17",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E17",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F17",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G17",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "03/10/2017",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I17",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3600",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M17",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "14",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N17",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A18",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0013",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C18",
+    "pillar": "S",
+    "field": "department",
+    "value": "QA",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D18",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E18",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F18",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G18",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "20/07/2020",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I18",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3050",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M18",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "16",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N18",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A19",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0014",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C19",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D19",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E19",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F19",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G19",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "05/12/2016",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I19",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3400",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N19",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A20",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0015",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C20",
+    "pillar": "S",
+    "field": "department",
+    "value": "Sales",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D20",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E20",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F20",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G20",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "29/03/2021",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I20",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3900",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M20",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "12",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N20",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A21",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0016",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C21",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D21",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E21",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F21",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G21",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "12/3/2021",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I21",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3150",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M21",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N21",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A22",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0017",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C22",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D22",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E22",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Nepali",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F22",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Contract",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G22",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "06/02/2023",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I22",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "1850",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N22",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A23",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0018",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C23",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D23",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E23",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Nepali",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F23",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Contract",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G23",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "06/02/2023",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I23",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "1850",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M23",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "4",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N23",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A24",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0019",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C24",
+    "pillar": "S",
+    "field": "department",
+    "value": "Admin",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D24",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E24",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F24",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G24",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "16/05/2022",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I24",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2900",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M24",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N24",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A25",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0020",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C25",
+    "pillar": "S",
+    "field": "department",
+    "value": "Maintenance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D25",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E25",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F25",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G25",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "27/08/2018",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I25",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3550",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N25",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A26",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0021",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C26",
+    "pillar": "S",
+    "field": "department",
+    "value": "QA",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E26",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F26",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G26",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "13/09/2021",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I26",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3000",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M26",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "16",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N26",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A27",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0022",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C27",
+    "pillar": "S",
+    "field": "department",
+    "value": "Prod.",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D27",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E27",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F27",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G27",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "08/04/2019",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I27",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3250",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M27",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "6",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N27",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A28",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0023",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C28",
+    "pillar": "S",
+    "field": "department",
+    "value": "Finance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D28",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E28",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F28",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G28",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "02/11/2020",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I28",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "4000",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M28",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "20",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N28",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A29",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0024",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C29",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D29",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E29",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F29",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G29",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "Mar-2019",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I29",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3350",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N29",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A30",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0025",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C30",
+    "pillar": "S",
+    "field": "department",
+    "value": "Admin",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D30",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E30",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F30",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G30",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "24/01/2022",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I30",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2850",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M30",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N30",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A31",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0026",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C31",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production ",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D31",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E31",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F31",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G31",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "13/02/2017",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I31",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3500",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M31",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "12",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N31",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A32",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0027",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C32",
+    "pillar": "S",
+    "field": "department",
+    "value": "Sales",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D32",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E32",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F32",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G32",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "10/06/2019",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I32",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "4300",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M32",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "12",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N32",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A33",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0028",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C33",
+    "pillar": "S",
+    "field": "department",
+    "value": "HR",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D33",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E33",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F33",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G33",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "02/08/2021",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I33",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3200",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M33",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "24",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N33",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A34",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0029",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C34",
+    "pillar": "S",
+    "field": "department",
+    "value": "Maintenance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D34",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E34",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F34",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G34",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "30/05/2016",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I34",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3700",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N34",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A35",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0030",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C35",
+    "pillar": "S",
+    "field": "department",
+    "value": "QA",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E35",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F35",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G35",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "20/03/2023",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I35",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2800",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M35",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "16",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N35",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A36",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0031",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C36",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D36",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E36",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F36",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G36",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "15/01/2018",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I36",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3300",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M36",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N36",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A37",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0031",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C37",
+    "pillar": "S",
+    "field": "department",
+    "value": "PRODUCTION",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D37",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E37",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F37",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G37",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "15/01/2018",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I37",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3300",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M37",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N37",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A38",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0032",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C38",
+    "pillar": "S",
+    "field": "department",
+    "value": "Admin",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E38",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F38",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G38",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "05/09/2022",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I38",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2750",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N38",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A39",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0033",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C39",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D39",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E39",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F39",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G39",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "11/03/2020",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I39",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3150",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M39",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "6",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N39",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A40",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0034",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C40",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D40",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E40",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F40",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Resigned",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G40",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "22/07/2019",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I40",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3250",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M40",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "6",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N40",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A41",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0035",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C41",
+    "pillar": "S",
+    "field": "department",
+    "value": "Finance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D41",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E41",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F41",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G41",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "06/12/2021",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I41",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3850",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M41",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "20",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N41",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A42",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0036",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C42",
+    "pillar": "S",
+    "field": "department",
+    "value": "Maintenance",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D42",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E42",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F42",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G42",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "19/06/2023",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I42",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2900",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N42",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "No",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A43",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0037",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C43",
+    "pillar": "S",
+    "field": "department",
+    "value": "QA",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D43",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E43",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F43",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G43",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "14/08/2023",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I43",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2700",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M43",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "16",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N43",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A44",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0038",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C44",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D44",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E44",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Bangladeshi",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F44",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Contract",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G44",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "08/01/2024",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I44",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "1900",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M44",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "4",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N44",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A45",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0039",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C45",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E45",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F45",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G45",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "04/04/2022",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I45",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3100",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M45",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "8",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N45",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A46",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0040",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C46",
+    "pillar": "S",
+    "field": "department",
+    "value": "Admin",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D46",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E46",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F46",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G46",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "26/02/2024",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I46",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "2650",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N46",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A47",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0041",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C47",
+    "pillar": "S",
+    "field": "department",
+    "value": "Production",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D47",
+    "pillar": "S",
+    "field": "gender",
+    "value": "M",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E47",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F47",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G47",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "08/09/2015",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I47",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3600",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M47",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "12",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N47",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!A48",
+    "pillar": "S",
+    "field": "staff_id",
+    "value": "SP-0042",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!C48",
+    "pillar": "S",
+    "field": "department",
+    "value": "Sales",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!D48",
+    "pillar": "S",
+    "field": "gender",
+    "value": "F",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!E48",
+    "pillar": "S",
+    "field": "nationality",
+    "value": "Malaysian",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!F48",
+    "pillar": "S",
+    "field": "employment_type",
+    "value": "Permanent",
+    "unit": "text",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!G48",
+    "pillar": "S",
+    "field": "date_joined",
+    "value": "30/10/2023",
+    "unit": "date",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!I48",
+    "pillar": "S",
+    "field": "basic_salary",
+    "value": "3400",
+    "unit": "RM",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!M48",
+    "pillar": "S",
+    "field": "training_hours",
+    "value": "12",
+    "unit": "hours",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Payroll Dec 2025!N48",
+    "pillar": "S",
+    "field": "safety_induction",
+    "value": "Yes",
+    "unit": "bool",
+    "period": "2025-12",
+    "confidence": "verified"
+  },
+  {
+    "source_file": "S_payroll_headcount_2025.xlsx",
+    "source_ref": "Summary!B5",
+    "pillar": "S",
+    "field": "hr_system_headcount",
+    "value": "45",
+    "unit": "person",
+    "period": "2025-12",
+    "confidence": "inferred",
+    "note": "typed manually, not reconciled"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_title",
+    "value": "Anti-Bribery and Corruption Policy",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_issue_date",
+    "value": "2019-03-15",
+    "unit": "date",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_version",
+    "value": "1.0",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document header",
+    "pillar": "G",
+    "field": "policy_is_draft",
+    "value": "false",
+    "unit": "bool",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
     "source_file": "G_anti_bribery_policy.docx",
     "source_ref": "document control table",
     "pillar": "G",
     "field": "policy_approved_by",
     "value": "",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_owner",
+    "value": "[Insert name of Compliance Officer]",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_last_review",
+    "value": "",
+    "unit": "date",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "document control table",
+    "pillar": "G",
+    "field": "policy_next_review",
+    "value": "2020-03",
+    "unit": "date",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — references",
+    "pillar": "G",
+    "field": "policy_referenced_doc",
+    "value": "The Malaysian Anti-Corruption Commission (Amendment) Act 2018",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — references",
+    "pillar": "G",
+    "field": "policy_referenced_doc",
+    "value": "Appendix A - Gift and Entertainment Register",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — reporting section",
+    "pillar": "G",
+    "field": "policy_reporting_channel",
+    "value": "spsb.report@gmail.com",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — commitments",
+    "pillar": "G",
+    "field": "policy_commitment",
+    "value": "This policy will be communicated to all employees.",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — commitments",
+    "pillar": "G",
+    "field": "policy_commitment",
+    "value": "Anti-bribery awareness training will be conducted for all employees within three (3) months from the date of issue of this policy, and thereafter for all new employees as part of their induction.",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — commitments",
+    "pillar": "G",
+    "field": "policy_commitment",
+    "value": "All employees are required to sign an acknowledgement confirming that they have read and understood this policy.",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — commitments",
+    "pillar": "G",
+    "field": "policy_commitment",
+    "value": "Signed acknowledgements will be retained by Human Resources.",
+    "unit": "text",
+    "period": null,
+    "confidence": "verified"
+  },
+  {
+    "source_file": "G_anti_bribery_policy.docx",
+    "source_ref": "policy body — commitments",
+    "pillar": "G",
+    "field": "policy_commitment",
+    "value": "This policy shall be reviewed at least annually by the Compliance Officer, and updated as required to reflect changes in the law or in the Company's operations.",
     "unit": "text",
     "period": null,
     "confidence": "verified"
