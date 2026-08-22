@@ -1,13 +1,29 @@
-version: '3.8'
-
 services:
-  web:
-    build: .
+  dev:
+    profiles: ["dev"]
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
     ports:
-      - "5173:5173"
+      - "3000:3000"
+    env_file: .env.local
+    environment:
+      STORAGE_BACKEND: file
+      WATCHPACK_POLLING: "true"
     volumes:
       - .:/app
-      - /app/node_modules
+      - node_modules:/app/node_modules
+
+  app:
+    profiles: ["prod"]
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env.local
     environment:
-      - CHOKIDAR_USEPOLLING=true
-    command: npm run dev -- --host
+      STORAGE_BACKEND: file
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  node_modules:

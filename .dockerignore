@@ -1,7 +1,8 @@
 node_modules
-dist
+.next
 .git
-.gitignore
-.env
-Dockerfile
-docker-compose.yml
+data
+seed_docs
+esg-hackathon-repo-pack
+*.md
+.env*

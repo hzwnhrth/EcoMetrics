@@ -24,7 +24,7 @@ Business owners are required to track and reduce their carbon footprint, but the
 
 ## 🛠️ Built With
 
-*   **Frontend:** React, Next.js (Vite)
+*   **Frontend:** React, Next.js (App Router)
 *   **Styling:** Tailwind CSS, Framer Motion (Glassmorphism & Micro-animations)
 *   **AI Engine:** Google Gemini Vision API
 *   **Blockchain Integration:** Solana Web3 (Wallet Adapter)
@@ -37,10 +37,10 @@ Business owners are required to track and reduce their carbon footprint, but the
 Want to run EcoMetrics locally? Follow these steps:
 
 ### Prerequisites
-*   Node.js (v18+)
-*   npm or yarn
+*   Node.js (v20+)
+*   npm
 
-### Installation
+### Option A — Node
 1. **Clone the repository**
    ```bash
    git clone https://github.com/hzwnhrth/EcoMetrics.git
@@ -52,13 +52,32 @@ Want to run EcoMetrics locally? Follow these steps:
    npm install
    ```
 
-3. **Run the development server**
+3. **Configure environment**
+   ```bash
+   cp .env.example .env.local   # set GEMINI_API_KEY; SOLANA_SECRET_KEY optional
+   ```
+
+4. **Run the development server**
    ```bash
    npm run dev
    ```
 
-4. **View the app**
-   Open your browser and navigate to `http://localhost:5173`
+5. **View the app**
+   Open your browser and navigate to `http://localhost:3000`
+
+### Option B — Docker (no Node required)
+```bash
+cp .env.example .env.local   # set GEMINI_API_KEY; SOLANA_SECRET_KEY optional
+docker compose --profile prod up --build
+```
+Open http://localhost:3000 — the app boots pre-loaded with the demo dataset.
+Created actions persist in ./data across restarts.
+Note: without GEMINI_API_KEY the app is fully usable on the seeded data;
+only live re-extraction of PDF/DOCX uploads needs the key. The Excel
+re-upload demo (auto-verify) works with no keys at all.
+
+For the team dev loop with hot reload, use `docker compose --profile dev up`
+instead (plain `docker compose up` intentionally starts nothing).
 
 ---
 

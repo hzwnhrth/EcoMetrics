@@ -1,20 +1,25 @@
-# Use the official Node.js image as the base image
-FROM node:20-alpine
-
-# Set the working directory inside the container
+# ---- deps ----
+FROM node:20-alpine AS deps
 WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code
+# ---- build ----
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN npm run build
 
-# Expose the Vite default port
-EXPOSE 5173
-
-# Start the Vite development server and expose to network
-CMD ["npm", "run", "dev", "--", "--host"]
+# ---- run ----
+FROM node:20-alpine AS run
+WORKDIR /app
+ENV NODE_ENV=production PORT=3000 HOSTNAME=0.0.0.0
+COPY --from=build /app/.next/standalone ./
+COPY --from=build /app/.next/static ./.next/static
+COPY --from=build /app/public ./public
+COPY --from=build /app/seed ./seed
+RUN mkdir -p /app/data && chown -R node:node /app
+USER node
+EXPOSE 3000
+CMD ["node", "server.js"]

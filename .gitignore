@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# runtime persistence (bind-mounted into the prod container)
+data/
+
+# hackathon reference pack — kept local, never pushed (contains the flaw answer key)
+esg-hackathon-repo-pack/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
