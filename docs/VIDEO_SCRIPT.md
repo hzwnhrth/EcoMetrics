@@ -84,3 +84,9 @@ could never afford an ESG consultant. EcoMetrics. Thank you."
 - Running over 3:00? Safest cuts, in order: "We love him." · the "No
   participation trophies" line · the "folder called 'Misc'" clause. Cut jokes
   before you cut evidence.
+- **Optional finale (only if a take lands under 2:40):** after the FIXED upload,
+  drop in `S_payroll_headcount_2025_FIXED_ALL.xlsx` and say: "And when HR fixes
+  everything? Five findings close at once — Social hits ninety-six. But safety
+  incidents and turnover stay open, because no payroll file can prove those.
+  The app doesn't do participation trophies." (~10 seconds; see
+  demo_assets/README.md.)
