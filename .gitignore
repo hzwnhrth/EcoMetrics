@@ -13,6 +13,21 @@ dist-ssr
 *.local
 .env
 
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# env
+.env*
+!.env.example
+
+# local dev persistence (lib/store.ts file backend)
+data/store.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -23,3 +38,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*:Zone.Identifier
