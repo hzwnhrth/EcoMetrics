@@ -13,7 +13,7 @@ const links = [
   { href: "/upload", label: "Upload" },
 ] as const;
 
-export function TopNav() {
+export function TopNav({ tally }: { tally?: string }) {
   const pathname = usePathname();
 
   return (
@@ -39,9 +39,8 @@ export function TopNav() {
           ))}
         </nav>
         <div className="ml-auto">
-          {/* Evidence tally pill — wired to real store data in Phase 4 */}
           <Badge variant="outline" className="font-normal text-muted-foreground">
-            0 verified · 0 estimated · 0 unknown
+            {tally ?? "no evidence loaded"}
           </Badge>
         </div>
       </div>

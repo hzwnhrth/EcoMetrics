@@ -262,6 +262,25 @@ function statusOf(
   return "green";
 }
 
+// The evidence rows supporting an indicator — the same sets statusOf judges,
+// surfaced so the dashboard provenance dialog can list them.
+export function indicatorEvidence(evidence: Evidence[], code: string): Evidence[] {
+  switch (code) {
+    case "E1_ELECTRICITY":
+      return rowsByField(evidence, "electricity_kwh");
+    case "S1_HEADCOUNT":
+      return [...rowsByField(evidence, "staff_id"), ...rowsByField(evidence, "hr_system_headcount")];
+    case "S2_TRAINING":
+      return [...rowsByField(evidence, "training_hours"), ...rowsByField(evidence, "safety_induction")];
+    case "S3_WAGE_COMPLIANCE":
+      return rowsByField(evidence, "basic_salary");
+    case "G1_ABC_POLICY":
+      return evidence.filter((e) => e.pillar === "G");
+    default:
+      return [];
+  }
+}
+
 export function computeIndicators(evidence: Evidence[], findings: Finding[]): Indicator[] {
   const kwh = rowsByField(evidence, "electricity_kwh");
   const pageAccount = accountByPage(evidence);
@@ -275,18 +294,17 @@ export function computeIndicators(evidence: Evidence[], findings: Finding[]): In
   const e1: Indicator = {
     code: "E1_ELECTRICITY", pillar: "E", label: "Electricity consumption 2025",
     value: String(verifiedSum), unit: "kWh",
-    status: statusOf(kwh, "E1_ELECTRICITY", findings),
+    status: statusOf(indicatorEvidence(evidence, "E1_ELECTRICITY"), "E1_ELECTRICITY", findings),
     coverage_note: `${vMonths} of 12 months verified, ${eMonths} estimated, ${12 - vMonths - eMonths} missing`,
   };
 
   const salaries = rowsByField(evidence, "basic_salary");
   const staffIds = rowsByField(evidence, "staff_id");
   const hr = rowsByField(evidence, "hr_system_headcount")[0];
-  const s1Support = [...staffIds, ...(hr ? [hr] : [])];
   const s1: Indicator = {
     code: "S1_HEADCOUNT", pillar: "S", label: "Headcount (Dec 2025)",
     value: String(salaries.length), unit: "person",
-    status: statusOf(s1Support, "S1_HEADCOUNT", findings),
+    status: statusOf(indicatorEvidence(evidence, "S1_HEADCOUNT"), "S1_HEADCOUNT", findings),
     coverage_note: `register: ${salaries.length} rows with salary, ${new Set(staffIds.map((e) => e.value)).size} distinct IDs; HR system: ${hr ? hr.value + " (inferred)" : "not provided"}`,
   };
 
@@ -296,7 +314,7 @@ export function computeIndicators(evidence: Evidence[], findings: Finding[]): In
   const s2: Indicator = {
     code: "S2_TRAINING", pillar: "S", label: "Training hours 2025",
     value: String(trainingSum), unit: "hours",
-    status: statusOf([...training, ...induction], "S2_TRAINING", findings),
+    status: statusOf(indicatorEvidence(evidence, "S2_TRAINING"), "S2_TRAINING", findings),
     coverage_note: `${training.length} of ${salaries.length} staff have recorded hours; ${salaries.length - training.length} blank (not recorded, not zero)`,
   };
 
@@ -304,13 +322,12 @@ export function computeIndicators(evidence: Evidence[], findings: Finding[]): In
   const s3: Indicator = {
     code: "S3_WAGE_COMPLIANCE", pillar: "S", label: "Minimum wage compliance",
     value: `${salaries.length - below.length} of ${salaries.length}`, unit: "person",
-    status: statusOf(salaries, "S3_WAGE_COMPLIANCE", findings),
+    status: statusOf(indicatorEvidence(evidence, "S3_WAGE_COMPLIANCE"), "S3_WAGE_COMPLIANCE", findings),
     coverage_note: below.length
       ? `${below.length} staff below RM1,700/month (Minimum Wages Order 2024)`
       : "all recorded salaries at or above RM1,700/month",
   };
 
-  const gRows = evidence.filter((e) => e.pillar === "G");
   const version = rowsByField(evidence, "policy_version")[0]?.value;
   const issued = rowsByField(evidence, "policy_issue_date")[0]?.value;
   const gFindings = findings.filter((f) => f.indicator_code === "G1_ABC_POLICY");
@@ -318,7 +335,7 @@ export function computeIndicators(evidence: Evidence[], findings: Finding[]): In
     code: "G1_ABC_POLICY", pillar: "G", label: "Anti-bribery & corruption policy",
     value: version ? `v${version}${issued ? ` (issued ${issued})` : ""}` : "not provided",
     unit: "text",
-    status: statusOf(gRows, "G1_ABC_POLICY", findings),
+    status: statusOf(indicatorEvidence(evidence, "G1_ABC_POLICY"), "G1_ABC_POLICY", findings),
     coverage_note: gFindings.length
       ? `policy exists but ${gFindings.length} control finding${gFindings.length > 1 ? "s" : ""}: ${gFindings.map((f) => f.rule_code).join(", ")}`
       : "policy provided and controls in order",
