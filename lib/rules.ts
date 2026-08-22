@@ -1,4 +1,11 @@
-import type { Evidence, Finding, Indicator } from "./types";
+import type { Evidence, Finding, Indicator, Pillar } from "./types";
+
+// local copy of lib/format.ts joinAnd — rules.ts stays value-import-free so
+// scripts/run-rules.mjs can load it under Node's native TS stripping
+function joinAnd(items: string[]): string {
+  if (items.length <= 1) return items.join("");
+  return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
+}
 
 // 12 pure rules + indicators. No network, no AI; `today` is a parameter so
 // runs are testable and identical. Findings/indicators are virtual — derived
@@ -16,7 +23,8 @@ function finding(
   severity: 1 | 2 | 3,
   quick_win: 0 | 1,
   title: string,
-  detail: string
+  detail: string,
+  suggested_step: string
 ): Finding {
   return {
     id: rule_code,
@@ -24,11 +32,54 @@ function finding(
     indicator_code,
     title,
     detail,
+    suggested_step,
     severity,
     customer_asked: CUSTOMER_ASKED,
     quick_win,
     score: score(severity, quick_win),
   };
+}
+
+// ---------------------------------------------------------------------------
+// Plain-language key per rule (QA items 4 + 8): what the code means to an
+// intern with no ESG background, and which document would close the gap.
+
+export const PILLAR_NAMES: Record<Pillar, string> = {
+  E: "Environmental",
+  S: "Social",
+  G: "Governance",
+};
+
+export const PILLAR_TOPICS: Record<Pillar, string> = {
+  E: "energy, emissions, waste",
+  S: "staff, wages, safety, training",
+  G: "policies, approvals, controls",
+};
+
+export const RULE_INFO: Record<string, { pillar: Pillar; label: string; closes_gap: string }> = {
+  "E-GAP": { pillar: "E", label: "missing monthly electricity bills", closes_gap: "TNB bills for the missing months" },
+  "E-EST": { pillar: "E", label: "estimated (not actual) meter readings", closes_gap: "actual-read TNB bills or meter photos" },
+  "E-SCOPE": { pillar: "E", label: "a second electricity account in the bills", closes_gap: "written confirmation of which sites are in the questionnaire's scope" },
+  "S-WAGE": { pillar: "S", label: "statutory minimum wage compliance", closes_gap: "a revised payroll register with every salary at RM1,700 or above" },
+  "S-INDUCT": { pillar: "S", label: "staff without safety induction", closes_gap: "a signed safety induction attendance record" },
+  "S-RECON": { pillar: "S", label: "headcount figures that do not reconcile", closes_gap: "a corrected HR headcount or payroll register" },
+  "S-BLANK": { pillar: "S", label: "blank cells in the payroll register", closes_gap: "a payroll register with gender and training hours filled in" },
+  "S-DUP": { pillar: "S", label: "duplicate staff IDs in the register", closes_gap: "a de-duplicated payroll register" },
+  "S-ABSENT": { pillar: "S", label: "no source for safety incidents and turnover", closes_gap: "a safety incident log and a leavers report" },
+  "G-STALE": { pillar: "G", label: "policy review overdue", closes_gap: "a re-issued policy with a current next-review date" },
+  "G-UNSIGNED": { pillar: "G", label: "policy not signed off", closes_gap: "the policy signed by the Managing Director with a named owner" },
+  "G-ORPHAN": { pillar: "G", label: "referenced documents not provided", closes_gap: "the appendix/register documents the policy refers to" },
+};
+
+// Simple pillar health score for the post-upload diff (QA item 12):
+// 100 minus the score of every finding touching the pillar, floored at 0.
+export function pillarScores(findings: Finding[]): Record<Pillar, number> {
+  const scores: Record<Pillar, number> = { E: 100, S: 100, G: 100 };
+  for (const f of findings) {
+    const p = RULE_INFO[f.rule_code]?.pillar ?? (f.rule_code[0] as Pillar);
+    scores[p] = Math.max(0, Math.round((scores[p] - f.score) * 10) / 10);
+  }
+  return scores;
 }
 
 const MONTHS_2025 = Array.from({ length: 12 }, (_, i) => `2025-${String(i + 1).padStart(2, "0")}`);
@@ -74,7 +125,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
     if (missing.length) {
       findings.push(
         finding("E-GAP", "E1_ELECTRICITY", 2, 1, "Missing electricity bills",
-          `Primary account ${primary} has bills for ${covered.size} of 12 months of 2025; missing ${missing.join(", ")}. Consumption for those months is unknown, not zero.`)
+          `Primary account ${primary} has bills for ${covered.size} of 12 months of 2025; missing ${missing.join(", ")}. Consumption for those months is unknown, not zero.`,
+          `Request TNB bills for ${missing.join(", ")} for account ${primary}.`)
       );
     }
   }
@@ -85,7 +137,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
     const parts = estimated.map((e) => `${e.period ?? "?"} (${e.source_ref}${e.note ? ", " + e.note : ""})`);
     findings.push(
       finding("E-EST", "E1_ELECTRICITY", 2, 1, "Estimated meter readings",
-        `Estimated (not actual) readings for: ${parts.join("; ")}. Ask the utility for actual-read bills or meter photos.`)
+        `Estimated (not actual) readings for: ${parts.join("; ")}. Ask the utility for actual-read bills or meter photos.`,
+        `Ask TNB for actual-read bills or meter photos for ${joinAnd([...new Set(estimated.map((e) => e.period ?? "?"))])}.`)
     );
   }
 
@@ -99,7 +152,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
     });
     findings.push(
       finding("E-SCOPE", "E1_ELECTRICITY", 1, 0, "Second electricity account found",
-        `${accounts.length} distinct accounts in the bills. Besides primary ${primary}: ${extras.join("; ")}. Confirm whether this site is in scope of the questionnaire.`)
+        `${accounts.length} distinct accounts in the bills. Besides primary ${primary}: ${extras.join("; ")}. Confirm whether this site is in scope of the questionnaire.`,
+        `Confirm with the customer whether ${extras[0]} is in scope, then include its bills or exclude it explicitly.`)
     );
   }
 
@@ -114,26 +168,24 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
   // ---- S-WAGE: basic salary below RM1,700 ----
   const low = salaries.filter((e) => Number(e.value) < 1700);
   if (low.length) {
-    const parts = low.map((e) => {
-      const id = staffIdByRow.get(payrollRow(e.source_ref) ?? "") ?? "?";
-      return `${id} (RM${e.value}, ${e.source_ref})`;
-    });
+    const lowIds = low.map((e) => staffIdByRow.get(payrollRow(e.source_ref) ?? "") ?? "?");
+    const parts = low.map((e, i) => `${lowIds[i]} (RM${e.value}, ${e.source_ref})`);
     findings.push(
       finding("S-WAGE", "S3_WAGE_COMPLIANCE", 3, 1, "Salaries below statutory minimum wage",
-        `${low.length} staff paid below the Minimum Wages Order 2024, RM1,700/month: ${parts.join("; ")}.`)
+        `${low.length} staff paid below the Minimum Wages Order 2024, RM1,700/month: ${parts.join("; ")}.`,
+        `Adjust the next payroll run for ${joinAnd(lowIds)} to RM1,700 minimum, then re-upload the payroll register.`)
     );
   }
 
   // ---- S-INDUCT: safety induction marked "No" ----
   const noInduct = rowsByField(evidence, "safety_induction").filter((e) => e.value === "No");
   if (noInduct.length) {
-    const parts = noInduct.map((e) => {
-      const id = staffIdByRow.get(payrollRow(e.source_ref) ?? "") ?? "?";
-      return `${id} (${e.source_ref})`;
-    });
+    const inductIds = noInduct.map((e) => staffIdByRow.get(payrollRow(e.source_ref) ?? "") ?? "?");
+    const parts = noInduct.map((e, i) => `${inductIds[i]} (${e.source_ref})`);
     findings.push(
       finding("S-INDUCT", "S2_TRAINING", 3, 1, "Staff without safety induction",
-        `Safety induction recorded as "No" for: ${parts.join("; ")}.`)
+        `Safety induction recorded as "No" for: ${parts.join("; ")}.`,
+        `Schedule safety induction for ${joinAnd(inductIds)}, then upload the signed attendance record.`)
     );
   }
 
@@ -146,7 +198,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
     if (!(hrCount === staffRowCount && staffRowCount === distinctIds)) {
       findings.push(
         finding("S-RECON", "S1_HEADCOUNT", 2, 1, "Headcount figures do not reconcile",
-          `HR system says ${hr.value} (${hr.source_ref}${hr.note ? ", " + hr.note : ""}), the register has ${staffRowCount} rows with a salary, and ${distinctIds} distinct staff IDs. All three should be equal.`)
+          `HR system says ${hr.value} (${hr.source_ref}${hr.note ? ", " + hr.note : ""}), the register has ${staffRowCount} rows with a salary, and ${distinctIds} distinct staff IDs. All three should be equal.`,
+          `Reconcile the HR system figure (${hr.value}) with the payroll register (${staffRowCount} salary rows, ${distinctIds} distinct IDs), correct whichever is wrong, and re-upload.`)
       );
     }
   }
@@ -154,6 +207,7 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
   // ---- S-BLANK: staff with salary but no gender / no training hours ----
   const salaryRows = new Set(salaries.map((e) => payrollRow(e.source_ref)).filter(Boolean) as string[]);
   const blanks: string[] = [];
+  const blankFields: string[] = [];
   for (const field of ["gender", "training_hours"]) {
     const present = new Set(rowsByField(evidence, field).map((e) => payrollRow(e.source_ref)));
     const missing = [...salaryRows].filter((r) => !present.has(r));
@@ -161,12 +215,14 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
       const ids = missing.map((r) => staffIdByRow.get(r) ?? `row ${r}`);
       const shown = ids.length > 6 ? ids.slice(0, 6).join(", ") + `, … (${ids.length} total)` : ids.join(", ");
       blanks.push(`${field} blank for ${missing.length} of ${salaryRows.size} staff (${shown})`);
+      blankFields.push(field.replace("_", " "));
     }
   }
   if (blanks.length) {
     findings.push(
       finding("S-BLANK", "S1_HEADCOUNT", 2, 1, "Blank cells in the payroll register",
-        `${blanks.join("; ")}. Blank means not recorded — it cannot be reported as zero.`)
+        `${blanks.join("; ")}. Blank means not recorded — it cannot be reported as zero.`,
+        `Fill in the blank ${joinAnd(blankFields)} cells in the payroll register, then re-upload it.`)
     );
   }
 
@@ -180,7 +236,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
     const parts = dups.map(([id, refs]) => `${id} (${refs.join(", ")})`);
     findings.push(
       finding("S-DUP", "S1_HEADCOUNT", 1, 1, "Duplicate staff IDs",
-        `Same staff ID on more than one register row: ${parts.join("; ")}.`)
+        `Same staff ID on more than one register row: ${parts.join("; ")}.`,
+        `Delete the duplicate register row for ${joinAnd(dups.map(([id]) => id))}, then re-upload the payroll file.`)
     );
   }
 
@@ -189,7 +246,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
   if (absent.length) {
     findings.push(
       finding("S-ABSENT", "S1_HEADCOUNT", 2, 0, "No data source for safety and turnover",
-        `No source document provided for: ${absent.join(", ")} — unknown, not zero. The questionnaire cannot be answered on these until a safety log / leavers report is uploaded.`)
+        `No source document provided for: ${absent.join(", ")} — unknown, not zero. The questionnaire cannot be answered on these until a safety log / leavers report is uploaded.`,
+        `Obtain the 2025 safety incident log and a leavers report from HR, so lost-time injuries and turnover can be evidenced.`)
     );
   }
 
@@ -202,7 +260,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
       const overdue = years >= 1 ? `${years} year${years > 1 ? "s" : ""}` : "less than a year";
       findings.push(
         finding("G-STALE", "G1_ABC_POLICY", 2, 0, "Policy review overdue",
-          `Next review was due ${nextReview.value} (${nextReview.source_ref}) — ${overdue} overdue.`)
+          `Next review was due ${nextReview.value} (${nextReview.source_ref}) — ${overdue} overdue.`,
+          `Review the policy now, set the next review date within 12 months, and record the review in the document control table.`)
       );
     }
   }
@@ -219,9 +278,11 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
   if (owner && owner.value.includes("["))
     failures.push(`Owner is an unfilled placeholder "${owner.value}" (${owner.source_ref})`);
   if (failures.length) {
+    const version = rowsByField(evidence, "policy_version")[0]?.value;
     findings.push(
       finding("G-UNSIGNED", "G1_ABC_POLICY", 3, 1, "Policy is not signed off",
-        `Control failures: ${failures.join("; ")}. An unapproved policy does not evidence "adequate procedures".`)
+        `Control failures: ${failures.join("; ")}. An unapproved policy does not evidence "adequate procedures".`,
+        `Route the ABC policy${version ? ` v${version}` : ""} to the Managing Director for signature and name a Compliance Officer in the document control table.`)
     );
   }
 
@@ -238,7 +299,8 @@ export function runRules(evidence: Evidence[], today: Date = new Date()): Findin
   if (orphans.length) {
     findings.push(
       finding("G-ORPHAN", "G1_ABC_POLICY", 2, 1, "Referenced documents not provided",
-        `The policy refers to documents that are not among the uploaded files: ${orphans.map((e) => `"${e.value}"`).join("; ")}. The customer may ask to see them.`)
+        `The policy refers to documents that are not among the uploaded files: ${orphans.map((e) => `"${e.value}"`).join("; ")}. The customer may ask to see them.`,
+        `Obtain and upload ${joinAnd(orphans.map((e) => `"${e.value}"`))}, or remove the reference from the policy.`)
     );
   }
 

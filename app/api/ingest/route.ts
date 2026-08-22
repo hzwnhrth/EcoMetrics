@@ -2,9 +2,10 @@ import { NextResponse } from "next/server";
 import { extractBills } from "@/lib/extract/bills";
 import { extractPayroll } from "@/lib/extract/payroll";
 import { extractPolicy } from "@/lib/extract/policy";
-import { runRules } from "@/lib/rules";
+import { pillarScores, runRules } from "@/lib/rules";
 import { getStore, replaceEvidenceForFile, saveStore } from "@/lib/store";
-import type { NewEvidence } from "@/lib/types";
+import { can, denyReason, getSessionUser } from "@/lib/auth";
+import { OPEN_STATUSES, type NewEvidence } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,11 @@ const DOC_TYPES = {
 } as const;
 
 export async function POST(req: Request) {
+  const user = await getSessionUser();
+  if (!can(user, "upload")) {
+    return NextResponse.json({ error: denyReason(user, "upload") }, { status: 403 });
+  }
+
   const form = await req.formData().catch(() => null);
   const file = form?.get("file");
   const docType = form?.get("docType") as keyof typeof DOC_TYPES | null;
@@ -48,6 +54,8 @@ export async function POST(req: Request) {
 
   const store = await getStore();
   const before = runRules(store.evidence);
+  const beforeScores = pillarScores(before);
+  const evidenceBefore = store.evidence.length;
 
   // remove evidence of every current file for this docType, then insert
   const ext = DOC_TYPES[docType].ext;
@@ -60,6 +68,7 @@ export async function POST(req: Request) {
   const updated = await replaceEvidenceForFile(file.name, newRows);
 
   const after = runRules(updated.evidence);
+  const afterScores = pillarScores(after);
   const beforeCodes = new Set(before.map((f) => f.rule_code));
   const afterCodes = new Set(after.map((f) => f.rule_code));
 
@@ -67,10 +76,17 @@ export async function POST(req: Request) {
   const resolved: string[] = [];
   for (const a of updated.actions) {
     if (
-      (a.status === "open" || a.status === "in_progress") &&
+      OPEN_STATUSES.includes(a.status) &&
       beforeCodes.has(a.finding_rule_code) &&
       !afterCodes.has(a.finding_rule_code)
     ) {
+      a.audit.push({
+        at: new Date().toISOString(),
+        by: "system (re-scan)",
+        via: "rescan",
+        from: a.status,
+        to: "resolved_verified",
+      });
       a.status = "resolved_verified";
       a.resolved_by = "rescan";
       resolved.push(a.finding_rule_code);
@@ -79,7 +95,7 @@ export async function POST(req: Request) {
   if (resolved.length) await saveStore(updated);
 
   const stillOpen = updated.actions
-    .filter((a) => a.status === "open" || a.status === "in_progress")
+    .filter((a) => OPEN_STATUSES.includes(a.status))
     .map((a) => a.finding_rule_code);
 
   return NextResponse.json({
@@ -88,5 +104,15 @@ export async function POST(req: Request) {
     source_file: file.name,
     rows: newRows.length,
     replaced: currentFiles,
+    // post-upload diff (QA item 12): the upload must move the numbers and prove it
+    diff: {
+      findings_closed: before.filter((f) => !afterCodes.has(f.rule_code)).map((f) => f.rule_code),
+      findings_new: after.filter((f) => !beforeCodes.has(f.rule_code)).map((f) => f.rule_code),
+      actions_resolved: resolved,
+      evidence_before: evidenceBefore,
+      evidence_after: updated.evidence.length,
+      pillar_scores_before: beforeScores,
+      pillar_scores_after: afterScores,
+    },
   });
 }

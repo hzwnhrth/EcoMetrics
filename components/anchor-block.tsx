@@ -18,7 +18,13 @@ type VerifyResult = {
 
 const short = (h: string) => `${h.slice(0, 10)}…${h.slice(-10)}`;
 
-export function AnchorBlock({ anchor }: { anchor: Anchor | null }) {
+export function AnchorBlock({
+  anchor,
+  signOffDenied,
+}: {
+  anchor: Anchor | null;
+  signOffDenied?: string;
+}) {
   const router = useRouter();
   const [busy, setBusy] = useState<"anchor" | "verify" | null>(null);
   const [verify, setVerify] = useState<VerifyResult | null>(null);
@@ -91,9 +97,12 @@ export function AnchorBlock({ anchor }: { anchor: Anchor | null }) {
         )}
 
         <div className="flex gap-2 print:hidden">
-          <Button size="sm" onClick={doAnchor} disabled={busy !== null}>
-            {busy === "anchor" ? "Anchoring…" : anchor ? "Re-anchor report" : "Anchor report"}
-          </Button>
+          {/* anchoring IS the sign-off — owner (Managing Director) only */}
+          <span title={signOffDenied}>
+            <Button size="sm" onClick={doAnchor} disabled={busy !== null || !!signOffDenied}>
+              {busy === "anchor" ? "Anchoring…" : anchor ? "Re-anchor report" : "Anchor report (sign off)"}
+            </Button>
+          </span>
           {anchor && (
             <Button size="sm" variant="outline" onClick={doVerify} disabled={busy !== null}>
               {busy === "verify" ? "Verifying…" : "Verify against anchor"}

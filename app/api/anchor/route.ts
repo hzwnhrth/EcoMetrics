@@ -2,10 +2,16 @@ import { NextResponse } from "next/server";
 import { computeReportHash } from "@/lib/canonical";
 import { anchorOnDevnet } from "@/lib/solana";
 import { getStore, setAnchor } from "@/lib/store";
+import { can, denyReason, getSessionUser } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
+// Anchoring IS the report sign-off — owner (Managing Director) only.
 export async function POST() {
+  const user = await getSessionUser();
+  if (!can(user, "sign_off")) {
+    return NextResponse.json({ error: denyReason(user, "sign_off") }, { status: 403 });
+  }
   const store = await getStore();
   try {
     const hash = computeReportHash(store);

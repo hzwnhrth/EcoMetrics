@@ -1,4 +1,18 @@
-# CLAUDE.md — ESG Evidence & Action Tool
+# CLAUDE.md — EcoMetrics (ESG Evidence & Action Tool)
+
+> **Post-hackathon QA amendments (2026-08-22).** The hackathon build is done and
+> was QA-reviewed; `greenreceipt-qa-fixes.md` is now part of the spec and
+> supersedes the hard constraints below where they conflict. Confirmed decisions:
+> product name is **EcoMetrics** (applied everywhere); auth with three roles
+> (owner / manager / staff — staff can view + upload only, manager everything but
+> report sign-off, owner everything) is now REQUIRED, with a `/login` page and
+> route guard; reminder emails send for real (Resend REST via fetch + a Vercel
+> cron hitting `/api/reminders`); the report maps to the **Bursa Malaysia
+> Simplified ESG Disclosure Guide (SEDG)**; manual re-open of a resolved action
+> sets "Open — needs re-verification", never silently re-runs analysis, and every
+> status change carries an audit-trail entry (who, when, manual vs system).
+> The original one-day constraints "NO auth", "NO cron jobs, NO SMTP" and "NO
+> extra pages" are lifted exactly that far and no further.
 
 You are building a hackathon project in ONE day. This file plus ARCHITECTURE.md
 (system diagram, ERD, re-scan sequence — read it FIRST) form the complete

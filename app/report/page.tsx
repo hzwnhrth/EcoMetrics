@@ -1,5 +1,8 @@
 import { getStore } from "@/lib/store";
 import { computeIndicators, runRules } from "@/lib/rules";
+import { SEDG_BY_INDICATOR, SEDG_FRAMEWORK, SEDG_UNEVIDENCED } from "@/lib/sedg";
+import { can, denyReason, getSessionUser } from "@/lib/auth";
+import { formatDate } from "@/lib/format";
 import { AnchorBlock } from "@/components/anchor-block";
 import { ExportButton } from "@/components/export-button";
 import { StatusBadge, StatusDot } from "@/components/status";
@@ -15,8 +18,17 @@ import type { Pillar } from "@/lib/types";
 
 const PILLAR_NAMES: Record<Pillar, string> = { E: "Environment", S: "Social", G: "Governance" };
 
+const STATUS_WORD: Record<string, string> = {
+  open: "open",
+  in_progress: "in progress",
+  done: "done",
+  resolved_verified: "resolved (verified)",
+  reopened: "open — needs re-verification",
+};
+
 export default async function ReportPage() {
   const store = await getStore();
+  const user = await getSessionUser();
   const findings = runRules(store.evidence);
   const indicators = computeIndicators(store.evidence, findings);
   const top5 = findings.slice(0, 5);
@@ -36,36 +48,59 @@ export default async function ReportPage() {
           </div>
           <ExportButton />
         </div>
-        <p className="pt-2 text-sm font-medium">ESG Questionnaire Response — Evidence & Action Report</p>
+        <p className="pt-2 text-sm font-medium">ESG Questionnaire Response</p>
+        <p className="text-xs font-medium text-muted-foreground">
+          Mapped to the {SEDG_FRAMEWORK.name}, {SEDG_FRAMEWORK.version}
+        </p>
         <p className="text-xs text-muted-foreground">
-          Generated {new Date().toISOString().slice(0, 10)} · evidence: {tally.verified} verified ·{" "}
-          {tally.estimated} estimated · {tally.inferred} inferred · every value traceable to a source
-          document
+          Generated {formatDate(new Date().toISOString().slice(0, 10))} by EcoMetrics · evidence:{" "}
+          {tally.verified} verified · {tally.estimated} estimated · {tally.inferred} inferred · every
+          value traceable to a source document
         </p>
       </header>
 
-      {/* pillar summary */}
+      {/* pillar summary, mapped to SEDG disclosures */}
       <section className="break-inside-avoid">
         <h2 className="mb-2 text-lg font-semibold">Pillar summary</h2>
         <div className="space-y-4">
           {(Object.keys(PILLAR_NAMES) as Pillar[]).map((p) => (
             <div key={p}>
               <h3 className="mb-1 text-sm font-medium text-muted-foreground">{PILLAR_NAMES[p]}</h3>
-              <ul className="space-y-1">
+              <ul className="space-y-2">
                 {indicators
                   .filter((i) => i.pillar === p)
-                  .map((i) => (
-                    <li key={i.code} className="flex items-baseline gap-2 text-sm">
-                      <StatusDot status={i.status} className="translate-y-px" />
-                      <span className="font-medium">{i.label}:</span>
-                      <span>
-                        {i.value} {i.unit !== "text" ? i.unit : ""}
-                      </span>
-                      <span className="text-xs text-muted-foreground">— {i.coverage_note}</span>
-                    </li>
-                  ))}
+                  .map((i) => {
+                    const sedg = SEDG_BY_INDICATOR[i.code];
+                    return (
+                      <li key={i.code} className="text-sm">
+                        <span className="flex items-baseline gap-2">
+                          <StatusDot status={i.status} className="translate-y-px" />
+                          <span className="font-medium">{i.label}:</span>
+                          <span>
+                            {i.value} {i.unit !== "text" ? i.unit : ""}
+                          </span>
+                          <span className="text-xs text-muted-foreground">— {i.coverage_note}</span>
+                        </span>
+                        {sedg && (
+                          <span className="block pl-[18px] text-xs text-muted-foreground">
+                            <span className="font-mono">{sedg.code}</span> ({sedg.tier}) —{" "}
+                            {sedg.disclosure}
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
+          ))}
+        </div>
+        <div className="mt-3 rounded-md border border-dashed p-3 text-xs text-muted-foreground">
+          <p className="font-medium text-foreground">SEDG disclosures not yet evidenced</p>
+          {SEDG_UNEVIDENCED.map((d) => (
+            <p key={`${d.code}-${d.blocked_by}`}>
+              <span className="font-mono">{d.code}</span> ({d.tier}) — {d.disclosure}:{" "}
+              {d.blocked_by}
+            </p>
           ))}
         </div>
       </section>
@@ -80,10 +115,11 @@ export default async function ReportPage() {
                 {f.title} ({f.rule_code})
               </span>{" "}
               <span className="font-mono text-xs text-muted-foreground">
-                score {f.severity} × {f.customer_asked ? 2 : 1}
-                {f.quick_win ? " × 1.5" : ""} = {f.score.toFixed(1)}
+                score: severity {f.severity} × customer-asked {f.customer_asked ? 2 : 1}
+                {f.quick_win ? " × quick-win 1.5" : ""} = {f.score.toFixed(1)}
               </span>
               <p className="text-xs text-muted-foreground">{f.detail}</p>
+              <p className="text-xs text-muted-foreground">Next step: {f.suggested_step}</p>
             </li>
           ))}
         </ol>
@@ -108,15 +144,18 @@ export default async function ReportPage() {
               {store.actions.map((a) => (
                 <TableRow key={a.id}>
                   <TableCell className="text-sm">
-                    {a.title} <span className="font-mono text-xs text-muted-foreground">{a.finding_rule_code}</span>
+                    {a.title}{" "}
+                    <span className="font-mono text-xs text-muted-foreground">{a.finding_rule_code}</span>
                   </TableCell>
                   <TableCell className="text-sm">{a.owner}</TableCell>
-                  <TableCell className="text-sm tabular-nums">{a.due_date}</TableCell>
+                  <TableCell className="text-sm tabular-nums whitespace-nowrap">
+                    {formatDate(a.due_date)}
+                  </TableCell>
                   <TableCell className="text-sm">
                     {a.resolved_by === "rescan" ? (
                       <StatusBadge status="green" label="verified by re-scan" />
                     ) : (
-                      a.status.replace("_", " ")
+                      STATUS_WORD[a.status] ?? a.status
                     )}
                   </TableCell>
                 </TableRow>
@@ -126,9 +165,12 @@ export default async function ReportPage() {
         )}
       </section>
 
-      {/* anchor block */}
+      {/* anchor block — anchoring is the MD's sign-off */}
       <section className="break-inside-avoid">
-        <AnchorBlock anchor={store.meta.anchor} />
+        <AnchorBlock
+          anchor={store.meta.anchor}
+          signOffDenied={can(user, "sign_off") ? undefined : denyReason(user, "sign_off")}
+        />
       </section>
     </div>
   );

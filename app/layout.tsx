@@ -4,6 +4,7 @@ import "./globals.css";
 import { TopNav } from "@/components/top-nav";
 import { Toaster } from "@/components/ui/sonner";
 import { getStore } from "@/lib/store";
+import { getSessionUser } from "@/lib/auth";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ESG Evidence & Action Tool",
+  title: "EcoMetrics — ESG Evidence & Action",
   description:
     "Extracts facts from messy documents, finds gaps with deterministic rules, and anchors the report on Solana devnet.",
 };
@@ -26,6 +27,7 @@ export const dynamic = "force-dynamic";
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const store = await getStore();
+  const user = await getSessionUser();
   const tally = { verified: 0, estimated: 0, inferred: 0 };
   for (const e of store.evidence) tally[e.confidence]++;
 
@@ -37,6 +39,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <TopNav
           tally={`${tally.verified} verified · ${tally.estimated} estimated · ${tally.inferred} inferred`}
+          user={user ? { name: user.name, title: user.title, role: user.role } : null}
         />
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
           {children}

@@ -11,13 +11,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const LABELS: Record<string, string> = {
+export const STATUS_LABELS: Record<string, string> = {
   open: "Open",
   in_progress: "In progress",
   done: "Done",
+  reopened: "Open — needs re-verification",
+  resolved_verified: "Resolved (verified)",
 };
 
-export function ActionStatusSelect({ id, status }: { id: string; status: string }) {
+// Selecting "Open" on a done/resolved action re-opens it: the server records
+// "reopened" (Open — needs re-verification) with an audit entry, and the next
+// relevant upload re-evaluates it (QA item 13).
+export function ActionStatusSelect({
+  id,
+  status,
+  disabledReason,
+}: {
+  id: string;
+  status: string;
+  disabledReason?: string;
+}) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
 
@@ -31,8 +44,17 @@ export function ActionStatusSelect({ id, status }: { id: string; status: string 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, status: next }),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      toast.success(`Action marked ${LABELS[next] ?? next}`);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      if (data.status === "reopened") {
+        toast.info("Re-opened — needs re-verification", {
+          description:
+            "Nothing is re-analysed on old files; the next relevant upload re-evaluates this action and may auto-close it again.",
+          duration: 8000,
+        });
+      } else {
+        toast.success(`Action marked ${STATUS_LABELS[data.status] ?? data.status}`);
+      }
       router.refresh();
     } catch (err) {
       toast.error(`Could not update: ${err instanceof Error ? err.message : "unknown error"}`);
@@ -41,18 +63,33 @@ export function ActionStatusSelect({ id, status }: { id: string; status: string 
     }
   }
 
-  return (
-    <Select value={status} onValueChange={change} disabled={saving} items={LABELS}>
-      <SelectTrigger size="sm" className="min-w-28">
+  // the three pickable targets, plus the current status so the value renders
+  const options = ["open", "in_progress", "done"];
+  const items = Object.fromEntries(
+    [...new Set([status, ...options])].map((v) => [v, STATUS_LABELS[v] ?? v])
+  );
+
+  const select = (
+    <Select
+      value={status}
+      onValueChange={change}
+      disabled={saving || !!disabledReason}
+      items={items}
+    >
+      <SelectTrigger size="sm" className="min-w-28 max-w-56">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        {Object.entries(LABELS).map(([value, label]) => (
+        {options.map((value) => (
           <SelectItem key={value} value={value}>
-            {label}
+            {status !== "open" && value === "open" && (status === "done" || status === "resolved_verified")
+              ? "Re-open (needs re-verification)"
+              : STATUS_LABELS[value]}
           </SelectItem>
         ))}
       </SelectContent>
     </Select>
   );
+
+  return disabledReason ? <span title={disabledReason}>{select}</span> : select;
 }

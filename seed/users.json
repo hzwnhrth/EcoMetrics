@@ -1,0 +1,26 @@
+[
+  {
+    "id": "user-md",
+    "name": "Fiqri Wilter",
+    "title": "Managing Director",
+    "email": "fiqrinewofficial@gmail.com",
+    "role": "owner",
+    "demo": true
+  },
+  {
+    "id": "user-hr",
+    "name": "Siti Aishah",
+    "title": "HR Manager",
+    "email": "hay733x@gmail.com",
+    "role": "manager",
+    "demo": true
+  },
+  {
+    "id": "user-intern",
+    "name": "Izzat Samsuddin",
+    "title": "Intern",
+    "email": "izzatsamsuddin@gmail.com",
+    "role": "staff",
+    "demo": true
+  }
+]

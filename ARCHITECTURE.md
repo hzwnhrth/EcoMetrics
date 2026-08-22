@@ -1,8 +1,19 @@
-# ARCHITECTURE.md — ESG Evidence & Action Tool
+# ARCHITECTURE.md — EcoMetrics (ESG Evidence & Action Tool)
 
 Companion to CLAUDE.md. Read both before building. These diagrams are the
 authoritative picture of the system: if code and diagram disagree, the diagram
 plus CLAUDE.md win.
+
+> **Post-QA amendments (2026-08-22, see CLAUDE.md header + greenreceipt-qa-fixes.md):**
+> the store now also persists `users` (three seeded roles: owner / manager / staff,
+> cookie-session auth, route guard in `proxy.ts`) and `meta.reminders_sent`;
+> every `Action` carries an `audit[]` trail and a fifth status `reopened`
+> ("Open — needs re-verification"); findings carry a deterministic
+> `suggested_step`; `/api/ingest` returns a before/after diff (findings closed,
+> actions resolved, pillar scores); reminder emails send via Resend REST from a
+> daily Vercel cron on `/api/reminders`; the report maps indicators to SEDG v2
+> disclosure codes. The diagrams below predate this and still describe the core
+> correctly — treat this note as the delta.
 
 Three diagrams: (1) system architecture, (2) logical ERD, (3) the re-scan
 auto-verify sequence. All Mermaid — GitHub renders them in the repo.

@@ -1,6 +1,18 @@
 export type Confidence = "verified" | "estimated" | "inferred";
 export type Pillar = "E" | "S" | "G";
 
+export type Role = "owner" | "manager" | "staff";
+
+export interface User {
+  id: string;
+  name: string;           // "Siti Aishah"
+  title: string;          // "HR Manager"
+  email: string;
+  role: Role;
+  password_hash: string;  // "salt:sha256hex"
+  demo?: boolean;         // seeded demo account — one-click login from the picker
+}
+
 export interface Evidence {
   id: string;
   source_file: string;      // "E_electricity_bills_2025.pdf"
@@ -33,22 +45,45 @@ export interface Finding {
   indicator_code: string;
   title: string;
   detail: string;            // plain English, cites evidence source_refs
+  suggested_step: string;    // pre-written next step, deterministic from the evidence
   severity: 1 | 2 | 3;
   customer_asked: 0 | 1;     // 1 for ALL rules in this demo dataset
   quick_win: 0 | 1;
   score: number;             // computed, never stored stale
 }
 
+// "reopened" = manually re-opened after done/resolved — "Open — needs
+// re-verification". Behaves as open everywhere; the next relevant upload
+// re-evaluates it and may auto-close it again.
+export type ActionStatus =
+  | "open"
+  | "in_progress"
+  | "done"
+  | "resolved_verified"
+  | "reopened";
+
+export const OPEN_STATUSES: readonly ActionStatus[] = ["open", "in_progress", "reopened"];
+
+export interface AuditEntry {
+  at: string;                     // ISO datetime
+  by: string;                     // user name; "system (re-scan)" for auto-resolve
+  via: "manual" | "rescan" | "seed";
+  from: ActionStatus | null;
+  to: ActionStatus;
+}
+
 export interface Action {
   id: string;
   finding_rule_code: string; // links action to the rule that spawned it
   title: string;
-  owner: string;
+  owner: string;             // display string: "Siti Aishah (HR Manager)"
+  owner_email: string;       // reminder emails route here; "" if unknown
   next_step: string;
   due_date: string;          // ISO date
-  status: "open" | "in_progress" | "done" | "resolved_verified";
+  status: ActionStatus;
   resolved_by: "manual" | "rescan" | null;
   created_at: string;
+  audit: AuditEntry[];       // every status change: who, when, manual vs system
 }
 
 export interface Anchor {
@@ -60,5 +95,11 @@ export interface Anchor {
 export interface Store {
   evidence: Evidence[];
   actions: Action[];
-  meta: { anchor: Anchor | null };
+  users: User[];
+  meta: {
+    anchor: Anchor | null;
+    // reminder thresholds already emailed, keyed by action id
+    // (values from: "-7", "-1", "0", "overdue")
+    reminders_sent: Record<string, string[]>;
+  };
 }

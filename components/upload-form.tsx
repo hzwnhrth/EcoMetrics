@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
+import type { Pillar } from "@/lib/types";
 
 const DOC_TYPES: Record<string, string> = {
   payroll: "Payroll (.xlsx)",
@@ -27,6 +28,66 @@ function guessDocType(name: string): string | null {
   return null;
 }
 
+interface IngestDiff {
+  findings_closed: string[];
+  findings_new: string[];
+  actions_resolved: string[];
+  evidence_before: number;
+  evidence_after: number;
+  pillar_scores_before: Record<Pillar, number>;
+  pillar_scores_after: Record<Pillar, number>;
+}
+
+const PILLAR_LABEL: Record<Pillar, string> = { E: "Environmental", S: "Social", G: "Governance" };
+
+// Post-upload diff (QA item 12): the upload must move the numbers, and prove it.
+function DiffPanel({ diff, sourceFile }: { diff: IngestDiff; sourceFile: string }) {
+  const scoreLines = (Object.keys(PILLAR_LABEL) as Pillar[])
+    .map((p) => ({
+      p,
+      before: diff.pillar_scores_before[p],
+      after: diff.pillar_scores_after[p],
+    }))
+    .filter((s) => s.before !== s.after);
+
+  return (
+    <div className="rounded-md border border-emerald-500/40 bg-emerald-500/5 p-4 text-sm">
+      <p className="font-medium">What changed after re-scanning {sourceFile}</p>
+      <ul className="mt-2 space-y-1 text-muted-foreground">
+        <li>
+          <span className="font-medium text-foreground">{diff.findings_closed.length}</span> finding
+          {diff.findings_closed.length === 1 ? "" : "s"} closed
+          {diff.findings_closed.length > 0 && ` (${diff.findings_closed.join(", ")})`}
+          {diff.findings_new.length > 0 && (
+            <> · {diff.findings_new.length} new ({diff.findings_new.join(", ")})</>
+          )}
+        </li>
+        <li>
+          <span className="font-medium text-foreground">{diff.actions_resolved.length}</span> action
+          {diff.actions_resolved.length === 1 ? "" : "s"} auto-resolved, verified by re-scan
+          {diff.actions_resolved.length > 0 && ` (${diff.actions_resolved.join(", ")})`}
+        </li>
+        {scoreLines.map((s) => (
+          <li key={s.p}>
+            {PILLAR_LABEL[s.p]} score{" "}
+            <span className="font-medium text-foreground">
+              {s.before} → {s.after} ({s.after > s.before ? "+" : ""}
+              {Math.round((s.after - s.before) * 10) / 10})
+            </span>
+          </li>
+        ))}
+        {scoreLines.length === 0 && <li>Pillar scores unchanged</li>}
+        <li>
+          Evidence rows{" "}
+          <span className="font-medium text-foreground">
+            {diff.evidence_before} → {diff.evidence_after}
+          </span>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 export function UploadForm() {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -34,6 +95,7 @@ export function UploadForm() {
   const [docType, setDocType] = useState<string>("payroll");
   const [dragging, setDragging] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [lastDiff, setLastDiff] = useState<{ diff: IngestDiff; sourceFile: string } | null>(null);
 
   function pick(f: File | null) {
     setFile(f);
@@ -61,6 +123,7 @@ export function UploadForm() {
           (data.stillOpen.length ? ` · still open: ${data.stillOpen.join(", ")}` : ""),
         { duration: 8000 }
       );
+      if (data.diff) setLastDiff({ diff: data.diff, sourceFile: data.source_file });
       setFile(null);
       router.refresh();
     } catch (err) {
@@ -112,7 +175,7 @@ export function UploadForm() {
         />
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <Select value={docType} onValueChange={(v) => setDocType(v as string)} items={DOC_TYPES}>
           <SelectTrigger className="min-w-52">
             <SelectValue />
@@ -129,6 +192,8 @@ export function UploadForm() {
           {busy ? "Re-scanning…" : "Upload & re-scan"}
         </Button>
       </div>
+
+      {lastDiff && <DiffPanel diff={lastDiff.diff} sourceFile={lastDiff.sourceFile} />}
     </div>
   );
 }

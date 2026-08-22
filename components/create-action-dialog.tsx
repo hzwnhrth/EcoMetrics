@@ -13,25 +13,47 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
-// Pre-filled from lib/suggest.ts on the server; everything editable here.
+export interface OwnerOption {
+  display: string; // "Siti Aishah (HR Manager)"
+  email: string;
+}
+
+// Pre-filled from lib/suggest.ts on the server; the user edits rather than
+// authors. Owner is a dropdown of existing users (QA item 3), next step is
+// pre-written from the finding (QA item 1).
 export function CreateActionDialog({
   ruleCode,
   defaultTitle,
   suggestedOwner,
   suggestedDueDate,
+  suggestedStep,
+  owners,
+  disabledReason,
 }: {
   ruleCode: string;
   defaultTitle: string;
   suggestedOwner: string;
   suggestedDueDate: string;
+  suggestedStep: string;
+  owners: OwnerOption[];
+  disabledReason?: string;
 }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [saving, setSaving] = useState(false);
   const [title, setTitle] = useState(defaultTitle);
-  const [owner, setOwner] = useState(suggestedOwner);
-  const [nextStep, setNextStep] = useState("");
+  const [owner, setOwner] = useState(
+    owners.find((o) => o.display === suggestedOwner)?.display ?? owners[0]?.display ?? suggestedOwner
+  );
+  const [nextStep, setNextStep] = useState(suggestedStep);
   const [dueDate, setDueDate] = useState(suggestedDueDate);
 
   async function save() {
@@ -44,11 +66,13 @@ export function CreateActionDialog({
           finding_rule_code: ruleCode,
           title,
           owner,
+          owner_email: owners.find((o) => o.display === owner)?.email ?? "",
           next_step: nextStep,
           due_date: dueDate,
         }),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
       toast.success(`Action created for ${ruleCode}`, {
         description: `${owner} · due ${dueDate}`,
       });
@@ -63,6 +87,17 @@ export function CreateActionDialog({
 
   const field = "flex flex-col gap-1.5";
   const label = "text-xs font-medium text-muted-foreground";
+  const ownerItems = Object.fromEntries(owners.map((o) => [o.display, o.display]));
+
+  if (disabledReason) {
+    return (
+      <span title={disabledReason}>
+        <Button variant="outline" size="sm" disabled>
+          Create action
+        </Button>
+      </span>
+    );
+  }
 
   return (
     <>
@@ -74,7 +109,7 @@ export function CreateActionDialog({
           <DialogHeader>
             <DialogTitle>Create action — {ruleCode}</DialogTitle>
             <DialogDescription>
-              Owner and due date are suggested; edit anything before saving.
+              Everything is suggested from the finding; edit before saving if needed.
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-3">
@@ -84,16 +119,22 @@ export function CreateActionDialog({
             </div>
             <div className={field}>
               <label className={label} htmlFor="ca-owner">Owner</label>
-              <Input id="ca-owner" value={owner} onChange={(e) => setOwner(e.target.value)} />
+              <Select value={owner} onValueChange={(v) => setOwner(v as string)} items={ownerItems}>
+                <SelectTrigger id="ca-owner" className="w-full">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {owners.map((o) => (
+                    <SelectItem key={o.display} value={o.display}>
+                      {o.display}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className={field}>
-              <label className={label} htmlFor="ca-next">Next step</label>
-              <Input
-                id="ca-next"
-                value={nextStep}
-                onChange={(e) => setNextStep(e.target.value)}
-                placeholder="e.g. Adjust salaries in January payroll run"
-              />
+              <label className={label} htmlFor="ca-next">Next step (suggested — edit if needed)</label>
+              <Input id="ca-next" value={nextStep} onChange={(e) => setNextStep(e.target.value)} />
             </div>
             <div className={field}>
               <label className={label} htmlFor="ca-due">Due date</label>
